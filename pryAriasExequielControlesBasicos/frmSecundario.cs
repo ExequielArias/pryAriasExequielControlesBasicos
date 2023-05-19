@@ -46,5 +46,28 @@ namespace pryAriasExequielControlesBasicos
         {
 
         }
+
+        private void cmdMostrar_Click(object sender, EventArgs e)
+        {
+            string textoConcatenar = "";
+            if (chkLeche.Checked==true) 
+            {
+                lblEscriba.Text = "Heladera";
+                textoConcatenar = textoConcatenar + "Heladera";
+            }
+            if (chkArroz.Checked==true)
+            {
+                lblEscriba.Text = "Freezer";
+                textoConcatenar = textoConcatenar + "Freezer";
+            }
+            if (chkAceite.Checked == true)
+            {
+                lblEscriba.Text = "Alacena";
+                textoConcatenar = textoConcatenar + "Alacena"; 
+            }
+            lblEscriba.Text = textoConcatenar; 
+
+            cboMostrar.Items.Add(textoConcatenar);
+        }
     }
 }
